@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 15% 15%;
+    --border: 210 15% 88%;
+    --input: 210 15% 95%;
+    --ring: 210 85% 45%;
+    
+    /* Primary (Blue) & Secondary (Green) for Brand Colors */
+    --primary: 210 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 142 71% 45%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 210 15% 95%;
+    --muted-foreground: 210 10% 45%;
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --radius: 0.75rem;
+
+    /* Category Filter Custom Properties */
+    --category-tab-bg: 210 15% 95%;
+    --category-tab-fg: 210 15% 30%;
+    --category-tab-active-bg: 210 85% 45%;
+    --category-tab-active-fg: 0 0% 100%;
+    
+    /* Header Custom Properties */
+    --header-gradient-start: 210 85% 45%;
+    --header-gradient-end: 142 71% 45%;
+  }
+
+  .dark {
+    --background: 210 20% 10%;
+    --foreground: 0 0% 98%;
+    --border: 210 15% 20%;
+    --input: 210 15% 15%;
+    --ring: 210 85% 55%;
+    
+    /* Dark Mode Primary (Blue) & Secondary (Green) */
+    --primary: 210 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 142 71% 50%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 210 15% 18%;
+    --muted-foreground: 210 10% 65%;
+    --accent: 142 71% 50%;
+    --accent-foreground: 0 0% 100%;
+    --card: 210 20% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 210 20% 12%;
+    --popover-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Category Filter Custom Properties */
+    --category-tab-bg: 210 15% 15%;
+    --category-tab-fg: 210 10% 80%;
+    --category-tab-active-bg: 210 85% 55%;
+    --category-tab-active-fg: 0 0% 100%;
+    
+    /* Header Custom Properties */
+    --header-gradient-start: 210 85% 55%;
+    --header-gradient-end: 142 71% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl font-extrabold; }
+  h2 { @apply text-3xl md:text-4xl lg:text-5xl font-bold; }
+  h3 { @apply text-2xl md:text-3xl font-semibold; }
+  h4 { @apply text-xl md:text-2xl font-semibold; }
+
+  p {
+    @apply leading-relaxed;
+    line-height: 1.7;
+  }
+}
+
+@layer utilities {
+  .bg-header-gradient {
+    background: linear-gradient(
+      135deg, 
+      hsl(var(--header-gradient-start) / 0.08) 0%, 
+      hsl(var(--header-gradient-end) / 0.08) 100%
+    );
+  }
+  
+  .bg-grid-pattern {
+    background-image: radial-gradient(circle at center, hsl(var(--foreground) / 0.05) 1.5px, transparent 1.5px);
+    background-size: 32px 32px;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 active:scale-[0.98] font-semibold;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-all duration-300 active:scale-[0.98] font-semibold;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  /* Category Filter Styling */
+  .category-tab {
+    @apply relative px-5 py-3 rounded-xl font-medium text-sm transition-all duration-300 border border-transparent whitespace-nowrap;
+    background-color: hsl(var(--category-tab-bg));
+    color: hsl(var(--category-tab-fg));
+  }
+
+  .category-tab:hover:not(.active) {
+    @apply bg-muted-foreground/10;
+  }
+
+  .category-tab.active {
+    background-color: hsl(var(--category-tab-active-bg));
+    color: hsl(var(--category-tab-active-fg));
+    @apply shadow-md;
+  }
+
+  /* Dropdown Styles */
+  .header-dropdown-menu {
+    @apply absolute top-full left-0 mt-2 w-64 bg-popover rounded-xl shadow-lg border border-border p-2 z-50;
+    transform-origin: top left;
+  }
+
+  .header-dropdown-item {
+    @apply flex items-center px-4 py-3 rounded-lg text-sm font-medium text-popover-foreground hover:bg-muted hover:text-primary transition-colors cursor-pointer;
+  }
+}
+
+/* Fallback CSS Animations */
+@keyframes slide-up-fade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
