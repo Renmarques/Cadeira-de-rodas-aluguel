@@ -210,7 +210,7 @@ const HomePage = () => {
                     'bg-muted hover:bg-muted/80'
                   }`}
                 >
-                  <div className="aspect-video overflow-hidden bg-slate-400">
+                  <div className="aspect-video overflow-hidden bg-slate-300">
                     <img
                       src={product.image}
                       alt={product.name}
