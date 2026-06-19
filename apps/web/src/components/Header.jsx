@@ -57,10 +57,10 @@ const Header = () => {
   };
 
   const productCategories = [
-    { name: 'Camas Hospitalar', icon: BedSingle },
-    { name: 'Cadeiras de Rodas', icon: Accessibility },
-    { name: 'Andadores', icon: Footprints },
-    { name: 'Muletas', icon: CandyCane }
+    { id: 'camas', name: 'Camas Hospitalar', icon: BedSingle },
+    { id: 'cadeiras', name: 'Cadeiras de Rodas', icon: Accessibility },
+    { id: 'andadores', name: 'Andadores', icon: Footprints },
+    { id: 'muletas', name: 'Muletas', icon: CandyCane }
     
   ];
 
@@ -111,9 +111,9 @@ const Header = () => {
                           const Icon = cat.icon;
                           return (
                             <a
-                              key={cat.name}
-                              href={`/shop?category=${encodeURIComponent(cat.name)}`}
-                              onClick={(e) => handleCategoryClick(e, cat.name)}
+                              key={cat.id}
+                              href={`/shop?category=${encodeURIComponent(cat.id)}`}
+                              onClick={(e) => handleCategoryClick(e, cat.id)}
                               className="header-dropdown-item"
                             >
                               <Icon className="h-4 w-4 mr-3 text-muted-foreground group-hover:text-primary" />
@@ -208,9 +208,9 @@ const Header = () => {
                             const Icon = cat.icon;
                             return (
                               <a
-                                key={cat.name}
-                                href={`/shop?category=${encodeURIComponent(cat.name)}`}
-                                onClick={(e) => handleCategoryClick(e, cat.name)}
+                                key={cat.id}
+                                href={`/shop?category=${encodeURIComponent(cat.id)}`}
+                                onClick={(e) => handleCategoryClick(e, cat.id)}
                                 className="flex items-center px-4 py-3 text-sm text-foreground hover:text-primary hover:bg-muted transition-colors"
                               >
                                 <Icon className="h-4 w-4 mr-3 text-muted-foreground" />

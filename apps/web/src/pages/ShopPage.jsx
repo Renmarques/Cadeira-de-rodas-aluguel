@@ -22,6 +22,7 @@ const MEDEQUIP_PRODUCTS = [
     id: 1,
       name: 'Cadeiras de Rodas',
       price: 'R$ 180/mês',
+      category: 'cadeiras',
       image: '/images/Cadeira.png',
       description:  'Cadeira de rodas resistente e confortável para auxiliar na locomoção de pacientes com mobilidade reduzida.',
       benefits: ['Estrutura dobrável','Apoio para pés','Fácil transporte','Conforto e segurança']
@@ -30,6 +31,7 @@ const MEDEQUIP_PRODUCTS = [
     id: 2,
       name: 'Camas Hospitalares',
       price: 'R$ 180/mês',
+      category: 'camas',
       image:  '/images/Cama.png',
       description: 'Cama hospitalar desenvolvida para proporcionar conforto, segurança e praticidade durante o tratamento e recuperação em casa.',
       benefits: [  'Ajuste de posição','Estrutura resistente','Proteção lateral','Pronta para uso imediato']
@@ -38,6 +40,7 @@ const MEDEQUIP_PRODUCTS = [
     id: 3,
       name: 'Andadores',
       price: 'R$ 180/mês',
+      category: 'andadores',
       image: '/images/Andador1.png',
       description:'Equipamento de apoio que proporciona mais estabilidade, segurança e confiança durante a locomoção.',
       benefits: [   'Maior estabilidade','Estrutura leve','Fácil transporte','Mais segurança ao caminhar']
@@ -47,6 +50,7 @@ const MEDEQUIP_PRODUCTS = [
        id: 4,
       name: 'Muletas',
       price: 'R$ 180/mês',
+      category: 'muletas',
       image: '/images/Muletas.png',
       description: 'Auxílio ideal para recuperação e mobilidade, oferecendo suporte seguro durante o deslocamento diário.',
       benefits: ['Altura ajustável','Apoio confortável','Estrutura resistente','Maior independência']
@@ -54,8 +58,8 @@ const MEDEQUIP_PRODUCTS = [
 
 ];  
 
-const CATEGORIES = [
-  'Camas Hospitalares',
+const CATEGORIES_LABELS = [
+  'Camas Hospitalar',
   'Cadeiras de Rodas',
   'Andadores',
   'Muletas',
@@ -146,7 +150,7 @@ const ShopPage = () => {
         <div className="sticky top-[72px] z-40 bg-background/80 backdrop-blur-md border-b border-border py-4 mb-10 shadow-sm">
           <div className="container-custom">
             <div className="flex justify-center items-center gap-3 overflow-x-auto no-scrollbar pb-2 pt-1">
-              {CATEGORIES.map((category) => {
+              {CATEGORIES_LABELS.map((category) => {
                 const isActive = activeCategory === category;
                 return (
                   <button
