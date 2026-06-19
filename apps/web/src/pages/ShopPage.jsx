@@ -22,7 +22,7 @@ const MEDEQUIP_PRODUCTS = [
     id: 1,
       name: 'Cadeiras de Rodas',
       price: 'R$ 180/mês',
-      image: 'https://images.unsplash.com/photo-1597349347986-c9ad2496686f',
+      image: '/images/Cadeira.png',
       description:  'Cadeira de rodas resistente e confortável para auxiliar na locomoção de pacientes com mobilidade reduzida.',
       benefits: ['Estrutura dobrável','Apoio para pés','Fácil transporte','Conforto e segurança']
   },
@@ -30,7 +30,7 @@ const MEDEQUIP_PRODUCTS = [
     id: 2,
       name: 'Camas Hospitalares',
       price: 'R$ 180/mês',
-      image: 'https://images.unsplash.com/photo-1618985081827-6e816a5ae3ad',
+      image:  '/images/Cama.png',
       description: 'Cama hospitalar desenvolvida para proporcionar conforto, segurança e praticidade durante o tratamento e recuperação em casa.',
       benefits: [  'Ajuste de posição','Estrutura resistente','Proteção lateral','Pronta para uso imediato']
   },
@@ -38,7 +38,7 @@ const MEDEQUIP_PRODUCTS = [
     id: 3,
       name: 'Andadores',
       price: 'R$ 180/mês',
-      image: 'https://images.unsplash.com/photo-1618985081827-6e816a5ae3ad',
+      image: '/images/Andador1.png',
       description:'Equipamento de apoio que proporciona mais estabilidade, segurança e confiança durante a locomoção.',
       benefits: [   'Maior estabilidade','Estrutura leve','Fácil transporte','Mais segurança ao caminhar']
    
@@ -47,7 +47,7 @@ const MEDEQUIP_PRODUCTS = [
        id: 4,
       name: 'Muletas',
       price: 'R$ 180/mês',
-      image: 'https://images.unsplash.com/photo-1618985081827-6e816a5ae3ad',
+      image: '/images/Muletas.png',
       description: 'Auxílio ideal para recuperação e mobilidade, oferecendo suporte seguro durante o deslocamento diário.',
       benefits: ['Altura ajustável','Apoio confortável','Estrutura resistente','Maior independência']
   }
@@ -216,7 +216,7 @@ const ShopPage = () => {
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full h-full object-contain scale-120"
                       />
                     </div>
                     <div className="p-6 flex flex-col flex-1">
