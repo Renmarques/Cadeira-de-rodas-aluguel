@@ -18,53 +18,66 @@ import { useProductFilters } from '@/hooks/useProductFilters.jsx';
 
 // MedEquip Global Static Products
 const MEDEQUIP_PRODUCTS = [
+
+   /* Cadeiras de Rodas */
+
   {
     id: 1,
-      name: 'Cadeiras de Rodas',
+      name: 'Cadeira Aço economy',
       price: 'R$ 180/mês',
       category: 'cadeiras',
       image: '/images/Cadeira.png',
       description:  'Cadeira de rodas resistente e confortável para auxiliar na locomoção de pacientes com mobilidade reduzida.',
-      benefits: ['Estrutura dobrável','Apoio para pés','Fácil transporte','Conforto e segurança']
+      benefits: ['Fabricada em aço carbono de qualidade','Capacidade para até 85 kg','Estrutura dobrável em X','Pintura eletrostática epóxi','Rodas traseiras maciças de 24"','Rodas dianteiras de 6"']
   },
+    /* Camas Hospitalares */
   {
     id: 2,
-      name: 'Camas Hospitalares',
+      name: 'Cama 3 movimentos elétrica',
       price: 'R$ 180/mês',
       category: 'camas',
       image:  '/images/Cama.png',
-      description: 'Cama hospitalar desenvolvida para proporcionar conforto, segurança e praticidade durante o tratamento e recuperação em casa.',
-      benefits: [  'Ajuste de posição','Estrutura resistente','Proteção lateral','Pronta para uso imediato']
+      description: 'Cama com 3 movimentos, ideal para higienização de pacientes no próprio leito com o máximo de praticidade e conforto.',
+      benefits: [ '3 movimentos (tronco, pernas e altura do leito)', 'Regulagem de altura de 53 até 85cm', 'Acionamento totalmente elétrico', 'Prática manivela integrada para ajustes', 'Estrutura de ferro robusta com acabamento branco', 'Suporta até 140 kg distribuídos com total segurança']
   },
+    /* Andadores */
   {
     id: 3,
-      name: 'Andadores',
+      name: 'Andador de 4 rodas',
       price: 'R$ 180/mês',
       category: 'andadores',
       image: '/images/Andador1.png',
-      description:'Equipamento de apoio que proporciona mais estabilidade, segurança e confiança durante a locomoção.',
-      benefits: [   'Maior estabilidade','Estrutura leve','Fácil transporte','Mais segurança ao caminhar']
+      description:'Andador articulado com assento e rodas, ideal para oferecer apoio e reduzir a resistência muscular dos membros inferiores com total conforto.',
+      benefits: [   'Assento acolchoado (suporta até 100 kg)', 'Estrutura dobrável com cesto em nylon para objetos', 'Rodas de 8 polegadas com sistema de freios', '8 níveis de regulagem de altura no apoio dos braços', 'Apoio de mãos emborrachado, macio e anatômico']
    
   },
+    /* Muletas */
   {
        id: 4,
-      name: 'Muletas',
+      name: 'Muleta axilar',
       price: 'R$ 180/mês',
       category: 'muletas',
       image: '/images/Muletas.png',
-      description: 'Auxílio ideal para recuperação e mobilidade, oferecendo suporte seguro durante o deslocamento diário.',
-      benefits: ['Altura ajustável','Apoio confortável','Estrutura resistente','Maior independência']
+      description: 'Muleta axilar em alumínio para proporcionar estabilidade e alívio de peso nos membros inferiores durante a locomoção.',
+      benefits: ['Estrutura em alumínio leve e de alta resistência', 'Regulagem de altura em múltiplos níveis para ajuste ideal', 'Apoio axilar e de mão emborrachados e confortáveis', 'Ponteiras de borracha antiderrapantes para maior segurança', 'Suporte de peso seguro e estabilidade garantida']
   }
 
 ];  
 
-const CATEGORIES_LABELS = [
-  'Camas Hospitalar',
-  'Cadeiras de Rodas',
-  'Andadores',
-  'Muletas',
-  
+
+const CATEGORIES = [
+  'camas',
+  'cadeiras',
+  'andadores',
+  'muletas',
 ];
+
+const CATEGORY_LABELS = {
+  camas: 'Camas Hospitalares',
+  cadeiras: 'Cadeiras de Rodas',
+  andadores: 'Andadores',
+  muletas: 'Muletas'
+};
 
 // Animation Variants
 const containerVariants = {
@@ -150,7 +163,7 @@ const ShopPage = () => {
         <div className="sticky top-[72px] z-40 bg-background/80 backdrop-blur-md border-b border-border py-4 mb-10 shadow-sm">
           <div className="container-custom">
             <div className="flex justify-center items-center gap-3 overflow-x-auto no-scrollbar pb-2 pt-1">
-              {CATEGORIES_LABELS.map((category) => {
+              {CATEGORIES.map((category) => {
                 const isActive = activeCategory === category;
                 return (
                   <button
@@ -159,7 +172,7 @@ const ShopPage = () => {
                     className={`category-tab ${isActive ? 'active' : ''}`}
                     aria-pressed={isActive}
                   >
-                    {category}
+                    {CATEGORY_LABELS[category]}
                     {isActive && (
                       <motion.div
                         layoutId="activeCategoryBorder"
@@ -224,11 +237,7 @@ const ShopPage = () => {
                       />
                     </div>
                     <div className="p-6 flex flex-col flex-1">
-                      <div className="mb-2">
-                        <span className="text-xs font-semibold uppercase tracking-wider text-primary/80 bg-primary/10 px-2 py-1 rounded-md">
-                          {product.name.split(' ')[0] || 'Equipamento'}
-                        </span>
-                      </div>
+                      
                       <h3 className="text-xl font-semibold mb-3 text-card-foreground">{product.name}</h3>
                       <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                         {product.description}
