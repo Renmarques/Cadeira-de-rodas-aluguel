@@ -33,10 +33,10 @@ const MEDEQUIP_PRODUCTS = [
 
   {
     id: 5,
-      name: 'Cadeira Alumínio Alemã stander',
+      name: 'Cadeira Alumínio Alemã Stander',
       price: 'R$ 160/mês',
       category: 'cadeiras',
-      image: '/images/cadeira3.png',
+      image: '/images/cadeiranova.png',
       description:  'Cadeira de rodas em alumínio premium de alta resistência, projetada com tecnologia alemã para máximo conforto e durabilidade.',
       benefits: ['Fabricada com tecnologia alemã em alumínio leve', 'Limite de peso suportado de até 125 kg', 'Rodas traseiras removíveis com sistema prático de 1-click', 'Apoio de braços escamoteáveis e escalonados', 'Pneus de borracha macia com tecnologia anti-furo']
   },
@@ -330,7 +330,7 @@ const ShopPage = () => {
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                     className="bg-card rounded-2xl overflow-hidden border border-border flex flex-col h-full card-hover shadow-sm"
                   >
-                    <div className="aspect-video overflow-hidden bg-slate-400">
+                    <div className="aspect-video overflow-hidden bg-slate-300">
                       <img
                         src={product.image}
                         alt={product.name}
