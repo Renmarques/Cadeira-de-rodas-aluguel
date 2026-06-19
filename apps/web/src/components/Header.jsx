@@ -70,16 +70,16 @@ const Header = () => {
         <div className="container-custom">
           <div className="flex items-center justify-between py-4 gap-4">
             <a href="/" onClick={(e) => handleNavClick(e, '/', null)} className="flex items-center gap-2">
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                  <MessageCircle className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold text-foreground leading-none">Cadeira de Rodas Aluguel</h1>
-                  <p className="text-xs text-muted-foreground leading-none">Locação Hospitalar</p>
-                </div>
-              </div>
-            </a>
+  <div className="flex items-center gap-3">
+    <img
+      src="/images/logo.avif"
+      alt="Cadeira de Rodas Aluguel"
+      className="h-20 w-auto"
+    />
+
+    
+  </div>
+</a>
 
             <nav className="hidden lg:flex items-center gap-8">
               <a href="/" onClick={(e) => handleNavClick(e, '/')} className="text-sm font-medium text-foreground hover:text-primary transition-colors">
