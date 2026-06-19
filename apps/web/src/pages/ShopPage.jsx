@@ -24,12 +24,95 @@ const MEDEQUIP_PRODUCTS = [
   {
     id: 1,
       name: 'Cadeira Aço economy',
-      price: 'R$ 180/mês',
+      price: 'R$ 100/mês',
       category: 'cadeiras',
       image: '/images/Cadeira.png',
       description:  'Cadeira de rodas resistente e confortável para auxiliar na locomoção de pacientes com mobilidade reduzida.',
-      benefits: ['Fabricada em aço carbono de qualidade','Capacidade para até 85 kg','Estrutura dobrável em X','Pintura eletrostática epóxi','Rodas traseiras maciças de 24"','Rodas dianteiras de 6"']
+      benefits: ['Fabricada em aço carbono de qualidade','Capacidade para até 85 kg','Estrutura dobrável em X','Pintura eletrostática epóxi','Rodas traseiras maciças de 24','Rodas dianteiras de 6']
   },
+
+  {
+    id: 5,
+      name: 'Cadeira Alumínio Alemã stander',
+      price: 'R$ 160/mês',
+      category: 'cadeiras',
+      image: '/images/Cadeira.png',
+      description:  'Cadeira de rodas em alumínio premium de alta resistência, projetada com tecnologia alemã para máximo conforto e durabilidade.',
+      benefits: ['Fabricada com tecnologia alemã em alumínio leve', 'Limite de peso suportado de até 125 kg', 'Rodas traseiras removíveis com sistema prático de 1-click', 'Apoio de braços escamoteáveis e escalonados', 'Pneus de borracha macia com tecnologia anti-furo']
+  },
+
+    {
+    id: 6,
+      name: 'Cadeira em Aço com Elevação de Perna',
+      price: 'R$ 180/mês',
+      category: 'cadeiras',
+      image: '/images/Cadeira.png',
+      description: 'Cadeira de rodas em aço carbono com assento duplo almofadado, projetada para oferecer excelente durabilidade, conforto e suavidade na locomoção.',
+      benefits: ['Estrutura em tubos de aço carbono com pintura epóxi e verniz', 'Assento e encosto em nylon duplo com almofada removível de 4cm', 'Rodas traseiras aro 24" em nylon injetado com pneus maciços', 'Rolamento duplo blindado para um deslize suave e seguro', 'Apoio para os pés com regulagem de altura e rebatíveis lateralmente']
+  },
+
+  {
+    id: 12,
+      name: 'Cadeira Alumínio Alemã Luxo ',
+      price: 'R$ 200/mês',
+      category: 'cadeiras',
+      image: '/images/Cadeira.png',
+      description: 'Cadeira de rodas de luxo em alumínio com tecnologia alemã, oferecendo altíssima qualidade, leveza e praticidade para o dia a dia.',
+      benefits: ['Fabricada com tecnologia alemã em alumínio premium', 'Limite de peso suportado de até 100 kg', 'Rodas traseiras removíveis com sistema prático de 1-click', 'Apoio de braços escamoteáveis, escalonados e almofadados', 'Apoio de pés removíveis e rebatíveis lateralmente', 'Pneus de borracha macia com tecnologia anti-furo']
+  },
+  
+   {
+    id: 7,
+      name: 'Cadeira Alumínio Alemã Luxo Obeso',
+      price: 'R$ 220/mês',
+      category: 'cadeiras',
+      image: '/images/Cadeira.png',
+      description: 'Cadeira de rodas em alumínio premium com tecnologia alemã, combinando leveza, praticidade para transporte e alta resistência.',
+      benefits: ['Fabricada com tecnologia alemã em alumínio de alta qualidade', 'Suporta limite de peso de até 125 kg', 'Rodas traseiras removíveis com sistema prático Quick Release (1-click)', 'Apoio de braços escamoteáveis, escalonados e almofadados', 'Apoio de pés removíveis e rebatíveis lateralmente', 'Pneus de borracha macia com tecnologia anti-furo']
+  },
+
+  {
+    id: 8,
+      name: 'Cadeira higiênica Aço',
+      price: 'R$ 90/mês',
+      category: 'cadeiras',
+      image: '/images/Cadeira.png',
+      description: 'Cadeira de banho e higiênica em aço com pintura epóxi, desenvolvida para garantir segurança e praticidade no cuidado diário.',
+      benefits: ['Estrutura robusta em aço com pintura epóxi de alta durabilidade', 'Altura ideal do chão até o assento de 50 cm', 'Assento ergonômico com 40 cm de largura', 'Dimensões compactas (95 cm de altura, 50 cm de largura e 56 cm de comprimento)', 'Estrutura estável com peso total de 15 kg']
+  },
+
+  {
+    id: 9,
+      name: 'Cadeira higiênica aço Obeso ',
+      price: 'R$ 110/mês',
+      category: 'cadeiras',
+      image: '/images/Cadeira.png',
+      description: 'Cadeira de banho e higiênica em aço com pintura epóxi, desenvolvida para garantir segurança e praticidade no cuidado diário.',
+      benefits: ['Estrutura robusta em aço com pintura epóxi de alta durabilidade', 'Altura ideal do chão até o assento de 50 cm', 'Assento ergonômico com 40 cm de largura', 'Dimensões compactas (95 cm de altura, 60 cm de largura e 56 cm de comprimento)', 'Estrutura estável com peso total de 15 kg']
+  },
+
+  {
+    id: 10,
+      name: 'Cadeira Higiênica Dobrável',
+      price: 'R$ 160/mês',
+      category: 'cadeiras',
+      image: '/images/Cadeira.png',
+      description: 'Cadeira higiênica e de banho em aço, dobrável e extremamente prática para transporte e armazenamento sem abrir mão da segurança.',
+      benefits: ['Estrutura dobrável em aço com pintura epóxi de alta durabilidade', 'Assento removível com suporte integrado para coletor', 'Rodas dianteiras e traseiras aro 06 giratórias com pneus maciços', 'Sistema de segurança com freios bilaterais', 'Apoio para os pés removível e encosto confortável em nylon']
+  },
+
+  {
+    id: 11,
+      name: 'Cadeira de Rodas Motorizada ',
+      price: 'R$ 400/mês',
+      category: 'cadeiras',
+      image: '/images/Cadeira.png',
+      description: 'Cadeira de rodas motorizada com design ergonômico, desenvolvida para proporcionar total autonomia, conforto e bem-estar.',
+      benefits: ['Motorizada elétrica para máxima autonomia e mobilidade', 'Ideal para idosos e pessoas com mobilidade reduzida', 'Design ergonômico com encosto estofado', 'Encosto prático e rebatível', 'Proporciona excelente conforto para o uso diário']
+  },
+
+
+
     /* Camas Hospitalares */
   {
     id: 2,
@@ -60,7 +143,8 @@ const MEDEQUIP_PRODUCTS = [
       image: '/images/Muletas.png',
       description: 'Muleta axilar em alumínio para proporcionar estabilidade e alívio de peso nos membros inferiores durante a locomoção.',
       benefits: ['Estrutura em alumínio leve e de alta resistência', 'Regulagem de altura em múltiplos níveis para ajuste ideal', 'Apoio axilar e de mão emborrachados e confortáveis', 'Ponteiras de borracha antiderrapantes para maior segurança', 'Suporte de peso seguro e estabilidade garantida']
-  }
+  },
+    /* Outros */
 
 ];  
 
@@ -70,14 +154,17 @@ const CATEGORIES = [
   'cadeiras',
   'andadores',
   'muletas',
+  'outros'
 ];
 
 const CATEGORY_LABELS = {
   camas: 'Camas Hospitalares',
   cadeiras: 'Cadeiras de Rodas',
   andadores: 'Andadores',
-  muletas: 'Muletas'
+  muletas: 'Muletas',
+  outros: 'Outros'
 };
+
 
 // Animation Variants
 const containerVariants = {
