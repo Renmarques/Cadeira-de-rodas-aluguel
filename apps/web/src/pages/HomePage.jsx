@@ -14,7 +14,7 @@ const HomePage = () => {
     {
       id: 1,
       name: 'Cadeiras de Rodas',
-      category: 'Cadeiras de Rodas',
+      category: 'cadeiras',
       price: 'R$ 180/mês',
       image: '/images/Cadeira.png',
       description:  'Cadeira de rodas resistente e confortável para auxiliar na locomoção de pacientes com mobilidade reduzida.',
@@ -24,7 +24,7 @@ const HomePage = () => {
     {
       id: 2,
       name: 'Camas Hospitalares',
-      category: 'Camas Hospitalares',
+      category: 'camas',
       price: 'R$ 180/mês',
       image:  '/images/cama5.png',
       description: 'Cama hospitalar desenvolvida para proporcionar conforto, segurança e praticidade durante o tratamento e recuperação em casa.',
@@ -33,7 +33,7 @@ const HomePage = () => {
     {
       id: 3,
       name: 'Andadores',
-      category: 'Andadores',
+      category: 'andadores',
       price: 'R$ 180/mês',
       image: '/images/Andador1.png',
       description:'Equipamento de apoio que proporciona mais estabilidade, segurança e confiança durante a locomoção.',
@@ -42,7 +42,7 @@ const HomePage = () => {
     {
       id: 4,
       name: 'Muletas',
-      category: 'Muletas',
+      category: 'muletas',
       price: 'R$ 180/mês',
       image: '/images/Muletas.png',
       description: 'Auxílio ideal para recuperação e mobilidade, oferecendo suporte seguro durante o deslocamento diário.',
