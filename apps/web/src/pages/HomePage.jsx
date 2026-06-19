@@ -26,7 +26,7 @@ const HomePage = () => {
       name: 'Camas Hospitalares',
       category: 'Camas Hospitalares',
       price: 'R$ 180/mês',
-      image:  '/images/Cama.png',
+      image:  '/images/cama5.png',
       description: 'Cama hospitalar desenvolvida para proporcionar conforto, segurança e praticidade durante o tratamento e recuperação em casa.',
       benefits: [  'Ajuste de posição','Estrutura resistente','Proteção lateral','Pronta para uso imediato']
     },
@@ -210,11 +210,11 @@ const HomePage = () => {
                     'bg-muted hover:bg-muted/80'
                   }`}
                 >
-                  <div className="aspect-video overflow-hidden">
+                  <div className="aspect-video overflow-hidden bg-slate-400">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-contain scale-120"
+                      className="w-full h-full object-contain scale-120 drop-shadow-lg"
                     />
                   </div>
                   <div className="p-6">
