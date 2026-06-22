@@ -15,7 +15,7 @@ const HomePage = () => {
       id: 1,
       name: 'Cadeiras de Rodas',
       category: 'cadeiras',
-      price: 'R$ 180/mês',
+      
       image: '/images/Cadeira.png',
       description:  'Cadeira de rodas resistente e confortável para auxiliar na locomoção de pacientes com mobilidade reduzida.',
       benefits: ['Estrutura dobrável','Apoio para pés','Fácil transporte','Conforto e segurança']
@@ -25,7 +25,7 @@ const HomePage = () => {
       id: 2,
       name: 'Camas Hospitalares',
       category: 'camas',
-      price: 'R$ 180/mês',
+      
       image:  '/images/cama5.png',
       description: 'Cama hospitalar desenvolvida para proporcionar conforto, segurança e praticidade durante o tratamento e recuperação em casa.',
       benefits: [  'Ajuste de posição','Estrutura resistente','Proteção lateral','Pronta para uso imediato']
@@ -34,7 +34,7 @@ const HomePage = () => {
       id: 3,
       name: 'Andadores',
       category: 'andadores',
-      price: 'R$ 180/mês',
+     
       image: '/images/Andador1.png',
       description:'Equipamento de apoio que proporciona mais estabilidade, segurança e confiança durante a locomoção.',
       benefits: [   'Maior estabilidade','Estrutura leve','Fácil transporte','Mais segurança ao caminhar']
@@ -43,7 +43,7 @@ const HomePage = () => {
       id: 4,
       name: 'Muletas',
       category: 'muletas',
-      price: 'R$ 180/mês',
+      
       image: '/images/Muletas.png',
       description: 'Auxílio ideal para recuperação e mobilidade, oferecendo suporte seguro durante o deslocamento diário.',
       benefits: ['Altura ajustável','Apoio confortável','Estrutura resistente','Maior independência']
@@ -142,36 +142,36 @@ const HomePage = () => {
     <>
       <Helmet>
         <title>Locação de Equipamentos Hospitalares - Atendimento Domiciliar | MedEquip</title>
-        <meta name="description" content="Aluguel de equipamentos hospitalares para atendimento domiciliar em São Paulo. Camas hospitalares, cadeiras de rodas, poltronas e mais. Entrega rápida em até 24h e suporte especializado." />
-        <meta name="keywords" content="locação equipamentos hospitalares, aluguel cama hospitalar, cadeira de rodas, atendimento domiciliar, equipamentos médicos, home care, São Paulo" />
+        <meta name="description" content="Aluguel de equipamentos hospitalares para atendimento domiciliar no Rio de Janeiro. Camas hospitalares, cadeiras de rodas, poltronas e mais. Entrega rápida em até 24h e suporte especializado." />
+        <meta name="keywords" content="locação equipamentos hospitalares, aluguel cama hospitalar, cadeira de rodas, atendimento domiciliar, equipamentos médicos, home care, Rio de Janeiro" />
       </Helmet>
 
       <Header />
 
       <main>
-        <section id="hero" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <section id="hero" className="relative min-h-[60vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1685657814797-83706c4e5279"
+              src="/images/teste.jpeg"
               alt="Equipamentos hospitalares para atendimento domiciliar"
-              className="w-full h-full object-cover"
-            />
+              className="w-full h-full object-cover object-top"
+              />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
           </div>
 
-          <div className="container-custom relative z-10 text-center text-white">
+          <div className="container-custom relative z-10  text-white">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-white mb-6 max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 max-w-3xl mx-auto leading-tight">
                 Locação de equipamentos hospitalares para atendimento domiciliar
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
                 Entrega rápida em até 24 horas com suporte especializado e equipamentos novos e higienizados
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-start">
                 <a href={getGeneralQuoteLink()} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="btn-primary text-lg px-8 py-6">
                     <MessageCircle className="h-5 w-5 mr-2" />

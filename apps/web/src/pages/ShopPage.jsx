@@ -137,6 +137,27 @@ const MEDEQUIP_PRODUCTS = [
 
     /* Andadores */
 
+  {
+    id: 17,
+      name: 'Andador Alumínio Dobrável Articulado',
+      price: 'R$ 60/mês',
+      category: 'andadores',
+      image: '/images/andador5.png',
+      description:'Andador de alumínio dobrável e articulado, projetado para oferecer máxima estabilidade, segurança e suporte ao caminhar.',
+      benefits: ['Estrutura leve em alumínio de alta durabilidade e barras centrais em aço', 'Modelo articulado e dobrável, prático para usar, guardar e transportar', 'Possui 7 níveis de regulagem de altura simples por pinos de ajuste fácil', 'Suporta até 130 kg com total estabilidade e segurança', 'Ponteiras de borracha com peça metálica interna para menor desgaste e ruído', 'Manoplas de borracha confortáveis e anatômicas para o usuário']
+   
+  },
+
+  {
+    id: 16,
+      name: 'Andador com Rodas',
+      price: 'R$ 120/mês',
+      category: 'andadores',
+      image: '/images/andador4.png',
+      description:'Andador dobrável com rodas frontais, ideal para auxiliar na locomoção de usuários que necessitam de máxima estabilidade e segurança ao caminhar.',
+      benefits: ['Possui 2 rodinhas frontais de 5″ que facilitam o deslocamento contínuo', 'Dupla configuração: pode ser utilizado como andador fixo ou articulado', 'Função articulada que acompanha o movimento do passo do usuário', 'Estrutura totalmente dobrável, facilitando o transporte e armazenamento', 'Fácil ajuste de configuração através de uma trava de posição simples']
+   
+  },
 
   {
     id: 3,
@@ -148,7 +169,22 @@ const MEDEQUIP_PRODUCTS = [
       benefits: [   'Assento acolchoado (suporta até 100 kg)', 'Estrutura dobrável com cesto em nylon para objetos', 'Rodas de 8 polegadas com sistema de freios', '8 níveis de regulagem de altura no apoio dos braços', 'Apoio de mãos emborrachado, macio e anatômico']
    
   },
+
+  {
+    id: 15,
+      name: 'Andador de 3 rodas',
+      price: 'R$ 120/mês',
+      category: 'andadores',
+      image: '/images/andador3.png',
+      description:'Andador articulado com 3 rodas, oferecendo excelente agilidade e suporte para reduzir a resistência muscular dos membros inferiores em espaços menores.',
+      benefits: ['Design com 3 rodas que garante maior manobrabilidade e leveza', 'Estrutura dobrável e compacta, ideal para transporte e armazenamento', 'Sistema de freios integrados nas rodas para total segurança', 'Regulagem de altura no apoio dos braços para ajuste perfeito', 'Apoio de mãos emborrachado, macio e anatômico']
+   
+  },
+
+
+  
     /* Muletas */
+
   {
        id: 4,
       name: 'Muleta axilar',
@@ -159,6 +195,16 @@ const MEDEQUIP_PRODUCTS = [
       benefits: ['Estrutura em alumínio leve e de alta resistência', 'Regulagem de altura em múltiplos níveis para ajuste ideal', 'Apoio axilar e de mão emborrachados e confortáveis', 'Ponteiras de borracha antiderrapantes para maior segurança', 'Suporte de peso seguro e estabilidade garantida']
   },
     /* Outros */
+
+     {
+       id: 14,
+      name: 'Scooter',
+      price: 'R$ 600/mês',
+      category: 'outros',
+      image: '/images/scooter.png',
+      description: 'Scooter elétrica prática e segura, desenvolvida para devolver a autonomia e a liberdade de locomoção no dia a dia.',
+      benefits: ['Excelente opção para cadeirantes, idosos e pessoas com mobilidade reduzida', 'Oferece total autonomia para realizar as atividades diárias', 'Condução extremamente segura e confortável', 'Design ergonômico projetado para o bem-estar do usuário']
+  },
 
 ];  
 
@@ -330,19 +376,27 @@ const ShopPage = () => {
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                     className="bg-card rounded-2xl overflow-hidden border border-border flex flex-col h-full card-hover shadow-sm"
                   >
-                    <div className="aspect-video overflow-hidden bg-slate-300">
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="w-full h-full object-contain scale-120 drop-shadow-lg "
-                      />
-                    </div>
-                    <div className="p-6 flex flex-col flex-1">
-                      
-                      <h3 className="text-xl font-semibold mb-3 text-card-foreground">{product.name}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                        {product.description}
-                      </p>
+                   <div className="aspect-video overflow-hidden bg-slate-300">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-contain scale-120 drop-shadow-lg"
+                    />
+                  </div>
+
+                  <div className="p-6 flex flex-col flex-1">
+
+                    <h3 className="text-xl font-semibold mb-2 text-card-foreground">
+                      {product.name}
+                    </h3>
+
+                    <p className="text-green-600 font-bold text-xl mb-1">
+                      {product.price}
+                    </p>
+
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                      {product.description}
+                    </p>
                       
                       <ul className="space-y-2 mb-8 flex-1">
                         {product.benefits.map((benefit, i) => (
